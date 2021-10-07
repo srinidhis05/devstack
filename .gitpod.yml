@@ -1,0 +1,10 @@
+vscode:
+  extensions:
+    - golang.go
+
+tasks:
+  - name: Install Delve
+    init: >
+      GOBIN=/tmp/ go install github.com/go-delve/delve/cmd/dlv@master &&
+      mkdir -p $GOPATH/bin/ &&
+      mv /tmp/dlv $GOPATH/bin/dlv-dap

@@ -37,7 +37,8 @@ func helloworld(w http.ResponseWriter, r *http.Request) {
 				}
 				.data h1 {
 					padding: 5px;
-					background-color: #ff6347;
+					// background-color: #ff6347;
+					background-color: #00FF00;
 					color: white;
 					text-align: center;
 				}
@@ -54,7 +55,7 @@ func helloworld(w http.ResponseWriter, r *http.Request) {
 				<div class="data">
 					<h1>Simple Go Helloworld</h1>
 					<h2>I'm {{.Hostname}}</h2>
-					<div class="release">Version: 2</div>
+					<div class="release">Version: 3</div>
 				</div>
 			</body>
 		</html>

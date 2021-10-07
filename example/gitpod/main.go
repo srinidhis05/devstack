@@ -14,16 +14,16 @@ func helloworld(w http.ResponseWriter, r *http.Request) {
 	var hostname string
 	var err error
 
-	hostname, err = os.Hostname() 
+	hostname, err = os.Hostname()
 	if err != nil {
 		hostname = "unknown"
 	}
 
-	context := Context {
-	 	Hostname: hostname,
+	context := Context{
+		Hostname: hostname,
 	}
 
-	 page := `
+	page := `
 		<html>
 			<head>
 				<title>Simple Go Helloworld</title>
@@ -54,7 +54,7 @@ func helloworld(w http.ResponseWriter, r *http.Request) {
 				<div class="data">
 					<h1>Simple Go Helloworld</h1>
 					<h2>I'm {{.Hostname}}</h2>
-					<div class="release">Version: 1</div>
+					<div class="release">Version: 2</div>
 				</div>
 			</body>
 		</html>
@@ -67,5 +67,5 @@ func helloworld(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/", helloworld)
-	http.ListenAndServe(":80", nil)
+	http.ListenAndServe(":8080", nil)
 }
